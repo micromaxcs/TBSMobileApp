@@ -1,0 +1,210 @@
+﻿.loginPage, .syncpage {
+    background-color: #e7e8eb;
+    padding: 20;
+}
+
+.loginframe {
+    background-color: #feffff;
+    padding: 20;
+}
+
+.bottomLabel, .lblBottom {
+    font-size: 12;
+    color: #9797ab;
+}
+
+.lblTitle {
+    font-size: 50;
+    color: #415365;
+}
+
+.lblWelcome {
+    color: #2f3640;
+    font-size: 70;
+}
+
+.lblSubWelcome, .lblRegtext {
+    color: #9797ab;
+    font-size: 18;
+}
+
+.lblSyncTitle {
+    color: #2f3640;
+    font-size: 30;
+    text-align: center;
+}
+
+.lblSyncSubTitle {
+    color: #9797ab;
+    font-size: 18;
+}
+
+.lblRegtext {
+    font-size: 13;
+    margin-bottom: 0;
+    margin-left: 5;
+}
+
+.lpframe, .fieldFrame {
+    padding: 15;
+    background-color: #fbfbfc;
+    margin-bottom: 10;
+}
+
+.lbl-login, .lbl-fieldform {
+    color: #9797ab;
+    font-size: 15;
+}
+
+.form-control, .fieldForm {
+    font-size: 16;
+    color: #415365;
+}
+
+.fieldForm {
+    font-size: 14;
+}
+
+.toplogin {
+    margin-top: 10;
+}
+
+.btn-login {
+    background-color: #1abc9c;
+    color: #feffff;
+    font-size: 18;
+    height: 50;
+    margin-bottom: 15;
+}
+
+.lblSync {
+    color: #415365;
+    font-size: 20;
+    margin-top: 50;
+    text-align: center;
+}
+
+.MainMenu {
+    background-color: #feffff;
+}
+
+.btnFAF, .btnPR, .btnRO, .btnLogout, .btnAH, .btnUI {
+    color: #feffff;
+    font-size: 22;
+    padding-top: 40;
+}
+
+.btnFAF {
+    background-color: #3498db;
+}
+
+.btnPR {
+    background-color: #1abc9c;
+}
+
+.btnRO {
+    background-color: #e67e22;
+}
+
+.btnLogout {
+    background-color: #e74c3c;
+}
+
+.btnAH {
+    background-color: #f1c40f;
+}
+
+.btnUI {
+    background-color: #2ecc71;
+}
+
+.faf, .prd, .rod, .aro, .ahd {
+    padding: 15;
+}
+
+.fafFrame, .apr {
+    padding: 15;
+}
+
+.btn-nav, .btnphoto {
+    background-color: #3498db;
+    color: #feffff;
+    font-size: 16;
+}
+
+.btnphoto {
+    background-color: #2ecc71;
+    height: 100;
+    padding: 0;
+    margin-bottom: 10;
+}
+
+.page2nav {
+    margin-top: 10;
+}
+
+.validation {
+    color: #e74c3c;
+    font-size: 13;
+}
+
+.prospectSearch {
+    font-size: 14;
+    color: #415365;
+}
+
+.lstName {
+    font-size: 18;
+    color: #415365;
+}
+
+.lstSubName {
+    font-size: 12;
+    color: #bdc3c7;
+}
+
+.lstContainer {
+    padding: 0;
+}
+
+.lstTitle {
+    font-size: 16;
+}
+
+.lstDetails {
+    font-size: 14;
+}
+
+.acthistory, .retailer, .retaileroutlet {
+    background-color: #f2f4f6;
+    padding: 10;
+}
+
+.ahd, .prd, .rod {
+    background-color: #f2f4f6;
+}
+
+.lstframe {
+    background-color: #feffff;
+    padding: 15;
+}
+
+.detailsFrame {
+    background-color: #feffff;
+    padding: 15;
+}
+
+.lblstatus, .lblunsyncedtitle {
+    text-align: center;
+    color: #feffff;
+    font-size: 15;
+    padding: 10;
+}
+
+.lblunsyncedtitle {
+    background-color: #3498db;
+}
+
+.lstSuggestion {
+    padding: 10;
+}

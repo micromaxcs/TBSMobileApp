@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -48,19 +48,115 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Xamarin.Forms" Version="3.0.0.561731" />
-    <PackageReference Include="Xamarin.Android.Support.Design" Version="27.0.2" />
-    <PackageReference Include="Xamarin.Android.Support.v7.AppCompat" Version="27.0.2" />
-    <PackageReference Include="Xamarin.Android.Support.v4" Version="27.0.2" />
-    <PackageReference Include="Xamarin.Android.Support.v7.CardView" Version="27.0.2" />
-    <PackageReference Include="Xamarin.Android.Support.v7.MediaRouter" Version="27.0.2" />
+    <PackageReference Include="Microsoft.AppCenter">
+      <Version>1.11.0</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.AppCenter.Analytics">
+      <Version>1.11.0</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.AppCenter.Crashes">
+      <Version>1.11.0</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.AppCenter.Distribute">
+      <Version>1.11.0</Version>
+    </PackageReference>
+    <PackageReference Include="Newtonsoft.Json">
+      <Version>12.0.1</Version>
+    </PackageReference>
+    <PackageReference Include="sqlite-net-pcl">
+      <Version>1.4.118</Version>
+    </PackageReference>
+    <PackageReference Include="Xam.Plugin.Connectivity">
+      <Version>3.2.0</Version>
+    </PackageReference>
+    <PackageReference Include="Xam.Plugin.DeviceInfo">
+      <Version>4.0.0.13</Version>
+    </PackageReference>
+    <PackageReference Include="Xam.Plugin.Geolocator">
+      <Version>4.5.0.6</Version>
+    </PackageReference>
+    <PackageReference Include="Xam.Plugin.Media">
+      <Version>4.0.1.5</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.Essentials">
+      <Version>1.0.0</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.Forms" Version="3.4.0.1008975" />
+    <PackageReference Include="Xamarin.Android.Support.Design" Version="27.0.2.1" />
+    <PackageReference Include="Xamarin.Android.Support.v7.AppCompat" Version="27.0.2.1" />
+    <PackageReference Include="Xamarin.Android.Support.v4" Version="27.0.2.1" />
+    <PackageReference Include="Xamarin.Android.Support.v7.CardView" Version="27.0.2.1" />
+    <PackageReference Include="Xamarin.Android.Support.v7.MediaRouter" Version="27.0.2.1" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Data\AndroidSQLiteDb.cs" />
+    <Compile Include="Data\CustomEntryRenderer.cs" />
+    <Compile Include="Data\CustomPickerRenderer.cs" />
     <Compile Include="MainActivity.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <AndroidAsset Include="Assets\HelveticaNeueBold.ttf" />
+    <AndroidAsset Include="Assets\HelveticaNeueBoldItalic.ttf" />
+    <AndroidAsset Include="Assets\HelveticaNeueCondensedBlack.ttf" />
+    <AndroidAsset Include="Assets\HelveticaNeueCondensedBold.ttf" />
+    <AndroidAsset Include="Assets\HelveticaNeueItalic.ttf" />
+    <AndroidAsset Include="Assets\HelveticaNeueLight.ttf" />
+    <AndroidAsset Include="Assets\HelveticaNeueLightItalic.ttf" />
+    <AndroidAsset Include="Assets\HelveticaNeueLTPro-Bd.otf" />
+    <AndroidAsset Include="Assets\HelveticaNeueLTPro-BdCn.otf" />
+    <AndroidAsset Include="Assets\HelveticaNeueLTPro-BdCnO.otf" />
+    <AndroidAsset Include="Assets\HelveticaNeueLTPro-BdEx.otf" />
+    <AndroidAsset Include="Assets\HelveticaNeueLTPro-BdExO.otf" />
+    <AndroidAsset Include="Assets\HelveticaNeueLTPro-BdIt.otf" />
+    <AndroidAsset Include="Assets\HelveticaNeueLTPro-BdOu.otf" />
+    <AndroidAsset Include="Assets\HelveticaNeueLTPro-Blk.otf" />
+    <AndroidAsset Include="Assets\HelveticaNeueLTPro-BlkCn.otf" />
+    <AndroidAsset Include="Assets\HelveticaNeueLTPro-BlkCnO.otf" />
+    <AndroidAsset Include="Assets\HelveticaNeueLTPro-BlkEx.otf" />
+    <AndroidAsset Include="Assets\HelveticaNeueLTPro-BlkExO.otf" />
+    <AndroidAsset Include="Assets\HelveticaNeueLTPro-BlkIt.otf" />
+    <AndroidAsset Include="Assets\HelveticaNeueLTPro-Cn.otf" />
+    <AndroidAsset Include="Assets\HelveticaNeueLTPro-CnO.otf" />
+    <AndroidAsset Include="Assets\HelveticaNeueLTPro-Ex.otf" />
+    <AndroidAsset Include="Assets\HelveticaNeueLTPro-ExO.otf" />
+    <AndroidAsset Include="Assets\HelveticaNeueLTPro-Hv.otf" />
+    <AndroidAsset Include="Assets\HelveticaNeueLTPro-HvCn.otf" />
+    <AndroidAsset Include="Assets\HelveticaNeueLTPro-HvCnO.otf" />
+    <AndroidAsset Include="Assets\HelveticaNeueLTPro-HvEx.otf" />
+    <AndroidAsset Include="Assets\HelveticaNeueLTPro-HvExO.otf" />
+    <AndroidAsset Include="Assets\HelveticaNeueLTPro-HvIt.otf" />
+    <AndroidAsset Include="Assets\HelveticaNeueLTPro-It.otf" />
+    <AndroidAsset Include="Assets\HelveticaNeueLTPro-Lt.otf" />
+    <AndroidAsset Include="Assets\HelveticaNeueLTPro-LtCn.otf" />
+    <AndroidAsset Include="Assets\HelveticaNeueLTPro-LtCnO.otf" />
+    <AndroidAsset Include="Assets\HelveticaNeueLTPro-LtEx.otf" />
+    <AndroidAsset Include="Assets\HelveticaNeueLTPro-LtExO.otf" />
+    <AndroidAsset Include="Assets\HelveticaNeueLTPro-LtIt.otf" />
+    <AndroidAsset Include="Assets\HelveticaNeueLTPro-Md.otf" />
+    <AndroidAsset Include="Assets\HelveticaNeueLTPro-MdCn.otf" />
+    <AndroidAsset Include="Assets\HelveticaNeueLTPro-MdCnO.otf" />
+    <AndroidAsset Include="Assets\HelveticaNeueLTPro-MdEx.otf" />
+    <AndroidAsset Include="Assets\HelveticaNeueLTPro-MdExO.otf" />
+    <AndroidAsset Include="Assets\HelveticaNeueLTPro-MdIt.otf" />
+    <AndroidAsset Include="Assets\HelveticaNeueLTPro-Roman.otf" />
+    <AndroidAsset Include="Assets\HelveticaNeueLTPro-Th.otf" />
+    <AndroidAsset Include="Assets\HelveticaNeueLTPro-ThCn.otf" />
+    <AndroidAsset Include="Assets\HelveticaNeueLTPro-ThCnO.otf" />
+    <AndroidAsset Include="Assets\HelveticaNeueLTPro-ThEx.otf" />
+    <AndroidAsset Include="Assets\HelveticaNeueLTPro-ThExO.otf" />
+    <AndroidAsset Include="Assets\HelveticaNeueLTPro-ThIt.otf" />
+    <AndroidAsset Include="Assets\HelveticaNeueLTPro-UltLt.otf" />
+    <AndroidAsset Include="Assets\HelveticaNeueLTPro-UltLtCn.otf" />
+    <AndroidAsset Include="Assets\HelveticaNeueLTPro-UltLtCnO.otf" />
+    <AndroidAsset Include="Assets\HelveticaNeueLTPro-UltLtEx.otf" />
+    <AndroidAsset Include="Assets\HelveticaNeueLTPro-UltLtExO.otf" />
+    <AndroidAsset Include="Assets\HelveticaNeueLTPro-UltLtIt.otf" />
+    <AndroidAsset Include="Assets\HelveticaNeueLTPro-XBlkCn.otf" />
+    <AndroidAsset Include="Assets\HelveticaNeueLTPro-XBlkCnO.otf" />
+    <AndroidAsset Include="Assets\HelveticaNeueUltraLight.ttf" />
+    <AndroidAsset Include="Assets\HelveticaNeueUltraLightItal.ttf" />
     <None Include="Resources\AboutResources.txt" />
     <None Include="Assets\AboutAssets.txt" />
     <None Include="Properties\AndroidManifest.xml" />
@@ -84,11 +180,11 @@
     <AndroidResource Include="Resources\mipmap-xxxhdpi\launcher_foreground.png" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Resources\drawable\" />
     <Folder Include="Resources\drawable-hdpi\" />
     <Folder Include="Resources\drawable-xhdpi\" />
     <Folder Include="Resources\drawable-xxhdpi\" />
     <Folder Include="Resources\drawable-xxxhdpi\" />
+    <Folder Include="Resources\drawable\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\TBSMobileApp\TBSMobileApp.csproj">
@@ -96,5 +192,8 @@
       <Name>TBSMobileApp</Name>
     </ProjectReference>
   </ItemGroup>
- <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
+  <ItemGroup>
+    <AndroidResource Include="Resources\xml\file_paths.xml" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>

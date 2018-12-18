@@ -1,4 +1,5 @@
 using System;
+using TBSMobileApp.View;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -11,8 +12,8 @@ namespace TBSMobileApp
 		{
 			InitializeComponent();
 
-			MainPage = new MainPage();
-		}
+            MainPage = new NavigationPage(new LoginPage());
+        }
 
 		protected override void OnStart ()
 		{
