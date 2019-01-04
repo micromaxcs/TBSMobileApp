@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TBSMobileApp.View.SyncPage"
+             NavigationPage.HasNavigationBar="False"
+             StyleClass="syncpage">
+    <ContentPage.Resources>
+        <StyleSheet Source="/Stylesheet/globalstylesheet.css" />
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout StyleClass="toplogin" VerticalOptions="Start">
+                <Label StyleClass="lblSyncTitle" Text="Your data is being synced">
+                    <Label.FontFamily>
+                        <OnPlatform x:TypeArguments="x:String">
+                            <On Platform="Android" Value="HelveticaNeueLTPro-Lt.otf#HelveticaNeueLTPro-Lt"/>
+                        </OnPlatform>
+                    </Label.FontFamily>
+                </Label>
+                <Label StyleClass="lblSyncSubTitle" Text="Please wait, your data is being synced. The UI will be locked until the sync is finished.">
+                    <Label.FontFamily>
+                        <OnPlatform x:TypeArguments="x:String">
+                            <On Platform="Android" Value="HelveticaNeueLTPro-Lt.otf#HelveticaNeueLTPro-Lt"/>
+                        </OnPlatform>
+                    </Label.FontFamily>
+                </Label>
+            </StackLayout>
+            <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+                <ActivityIndicator x:Name="actindicator" HeightRequest="120" Color="#1abc9c" IsRunning="True"/>
+                <Label StyleClass="lblSync" x:Name="syncStatus" Text="Getting data from server">
+                    <Label.FontFamily>
+                        <OnPlatform x:TypeArguments="x:String">
+                            <On Platform="Android" Value="HelveticaNeueLTPro-Lt.otf#HelveticaNeueLTPro-Lt"/>
+                        </OnPlatform>
+                    </Label.FontFamily>
+                </Label>
+            </StackLayout>
+            <StackLayout VerticalOptions="End">
+                <Button Text="Continue" Clicked="btnContinue_Clicked" StyleClass="btn-login" x:Name="btnContinue" BorderRadius="6" IsVisible="False">
+                    <Button.FontFamily>
+                        <OnPlatform x:TypeArguments="x:String">
+                            <On Platform="Android" Value="HelveticaNeueLTPro-Lt.otf#HelveticaNeueLTPro-Lt"/>
+                        </OnPlatform>
+                    </Button.FontFamily>
+                </Button>
+                <Button Text="Continue" Clicked="btnBack_Clicked" StyleClass="btn-login" x:Name="btnBack" BorderRadius="6" IsVisible="False">
+                    <Button.FontFamily>
+                        <OnPlatform x:TypeArguments="x:String">
+                            <On Platform="Android" Value="HelveticaNeueLTPro-Lt.otf#HelveticaNeueLTPro-Lt"/>
+                        </OnPlatform>
+                    </Button.FontFamily>
+                </Button>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

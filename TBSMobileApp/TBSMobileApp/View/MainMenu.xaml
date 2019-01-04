@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TBSMobileApp.View.MainMenu"
+             StyleClass="MainMenu"
+             NavigationPage.HasNavigationBar="False">
+    <ContentPage.Resources>
+        <StyleSheet Source="/Stylesheet/globalstylesheet.css" />
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <Grid RowSpacing="0" ColumnSpacing="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="25" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Label StyleClass="lblstatus" VerticalTextAlignment="Center" x:Name="lblStatus" Grid.Row="0" Grid.ColumnSpan="2" Grid.Column="0">
+                <Label.FontFamily>
+                    <OnPlatform x:TypeArguments="x:String">
+                        <On Platform="Android" Value="HelveticaNeueLTPro-Lt.otf#HelveticaNeueLTPro-Lt"/>
+                    </OnPlatform>
+                </Label.FontFamily>
+            </Label>
+            <Button StyleClass="btnFAF" ContentLayout="Top, 0" Image="fieldactivity.png" Text="Customer Activity Form"  Grid.Row="1" Grid.Column="0" x:Name="btnFAF" Clicked="btnFAF_Clicked" BorderRadius="0">
+                <Button.FontFamily>
+                    <OnPlatform x:TypeArguments="x:String">
+                        <On Platform="Android" Value="HelveticaNeueLTPro-Lt.otf#HelveticaNeueLTPro-Lt"/>
+                    </OnPlatform>
+                </Button.FontFamily>
+            </Button>
+            <Button StyleClass="btnAH" ContentLayout="Top, 0" Image="activityhistory.png" Text="Activity History" Grid.Row="1" Grid.Column="1" x:Name="btnAH" Clicked="btnAH_Clicked" BorderRadius="0">
+                <Button.FontFamily>
+                    <OnPlatform x:TypeArguments="x:String">
+                        <On Platform="Android" Value="HelveticaNeueLTPro-Lt.otf#HelveticaNeueLTPro-Lt"/>
+                    </OnPlatform>
+                </Button.FontFamily>
+            </Button>
+            <Button StyleClass="btnUI" ContentLayout="Top, 0" Image="unsynceditem.png" Text="Unsynced Data" Grid.Row="2" Grid.Column="0" x:Name="btnUI" Clicked="btnUI_Clicked" BorderRadius="0">
+                <Button.FontFamily>
+                    <OnPlatform x:TypeArguments="x:String">
+                        <On Platform="Android" Value="HelveticaNeueLTPro-Lt.otf#HelveticaNeueLTPro-Lt"/>
+                    </OnPlatform>
+                </Button.FontFamily>
+            </Button>
+            <Button StyleClass="btnLogout" ContentLayout="Top, 0" Image="logout.png" Text="Logout" Grid.Row="2" Grid.Column="1" x:Name="btnLogout" Clicked="btnLogout_Clicked" BorderRadius="0">
+                <Button.FontFamily>
+                    <OnPlatform x:TypeArguments="x:String">
+                        <On Platform="Android" Value="HelveticaNeueLTPro-Lt.otf#HelveticaNeueLTPro-Lt"/>
+                    </OnPlatform>
+                </Button.FontFamily>
+            </Button>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

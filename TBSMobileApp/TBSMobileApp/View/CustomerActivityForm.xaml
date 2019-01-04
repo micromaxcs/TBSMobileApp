@@ -1,0 +1,334 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:TBSMobileApp.Data"
+             xmlns:forms="clr-namespace:SignaturePad.Forms;assembly=SignaturePad.Forms"
+             x:Class="TBSMobileApp.View.CustomerActivityForm"
+             StyleClass="faf"
+             Title="Customer Activity Form"
+             NavigationPage.HasBackButton="False"
+             BackgroundColor="#e7e8eb">
+    <ContentPage.Resources>
+        <StyleSheet Source="/Stylesheet/globalstylesheet.css" />
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <StackLayout Orientation="Vertical">
+            <Frame StyleClass="fafFrame" CornerRadius="5">
+                <StackLayout Orientation="Vertical" VerticalOptions="StartAndExpand">
+                    <ScrollView>
+                        <StackLayout Orientation="Vertical">
+                            <StackLayout Orientation="Vertical" x:Name="fafPage1" Spacing="5">
+                                <Entry IsVisible="False" IsEnabled="False" x:Name="entCafNo"/>
+                                
+                                <Label Text="Customer" StyleClass="lbl-fieldform">
+                                    <Label.FontFamily>
+                                        <OnPlatform x:TypeArguments="x:String">
+                                            <On Platform="Android" Value="HelveticaNeueLTPro-Lt.otf#HelveticaNeueLTPro-Lt"/>
+                                        </OnPlatform>
+                                    </Label.FontFamily>
+                                </Label>
+                                <Frame StyleClass="fieldFrame" x:Name="CustomerFrame" CornerRadius="4" BorderColor="#e8eaed" HasShadow="False">
+                                    <local:CustomPicker x:Name="customerPicker" SelectedIndexChanged="CustomerPicker_SelectedIndexChanged" Focused="CustomerPicker_Focused" Unfocused="CustomerPicker_Unfocused" ItemDisplayBinding="{Binding CustomerPicker}" StyleClass="fieldForm">
+                                        <local:CustomPicker.FontFamily>
+                                            <OnPlatform x:TypeArguments="x:String">
+                                                <On Platform="Android" Value="HelveticaNeueLTPro-Lt.otf#HelveticaNeueLTPro-Lt"/>
+                                            </OnPlatform>
+                                        </local:CustomPicker.FontFamily>
+                                    </local:CustomPicker>
+                                </Frame>
+                                <Entry IsVisible="False" IsEnabled="False" x:Name="entCustomerID"/>
+
+                                <Label Text="Contact Person" StyleClass="lbl-fieldform">
+                                    <Label.FontFamily>
+                                        <OnPlatform x:TypeArguments="x:String">
+                                            <On Platform="Android" Value="HelveticaNeueLTPro-Lt.otf#HelveticaNeueLTPro-Lt"/>
+                                        </OnPlatform>
+                                    </Label.FontFamily>
+                                </Label>
+                                <Frame StyleClass="fieldFrame" x:Name="ContactPersonFrame" CornerRadius="4" BorderColor="#e8eaed" HasShadow="False">
+                                    <local:CustomPicker x:Name="contactpersonPicker" SelectedIndexChanged="ContactpersonPicker_SelectedIndexChanged" Focused="ContactpersonPicker_Focused" Unfocused="ContactpersonPicker_Unfocused" ItemDisplayBinding="{Binding CustomerPicker}" StyleClass="fieldForm">
+                                        <local:CustomPicker.FontFamily>
+                                            <OnPlatform x:TypeArguments="x:String">
+                                                <On Platform="Android" Value="HelveticaNeueLTPro-Lt.otf#HelveticaNeueLTPro-Lt"/>
+                                            </OnPlatform>
+                                        </local:CustomPicker.FontFamily>
+                                    </local:CustomPicker>
+                                </Frame>
+
+                                <Entry IsVisible="False" IsEnabled="False" x:Name="entContactPerson"/>
+
+                                <Label Text="Activity" StyleClass="lbl-fieldform">
+                                    <Label.FontFamily>
+                                        <OnPlatform x:TypeArguments="x:String">
+                                            <On Platform="Android" Value="HelveticaNeueLTPro-Lt.otf#HelveticaNeueLTPro-Lt"/>
+                                        </OnPlatform>
+                                    </Label.FontFamily>
+                                </Label>
+                                <Frame StyleClass="fieldFrame" x:Name="ActivityFrame" CornerRadius="4" BorderColor="#e8eaed" HasShadow="False">
+                                    <local:CustomPicker x:Name="activityPicker" SelectedIndexChanged="ActivityPicker_SelectedIndexChanged" Focused="ActivityPicker_Focused" Unfocused="ActivityPicker_Unfocused" ItemDisplayBinding="{Binding ActivityPicker}" StyleClass="fieldForm">
+                                        <local:CustomPicker.FontFamily>
+                                            <OnPlatform x:TypeArguments="x:String">
+                                                <On Platform="Android" Value="HelveticaNeueLTPro-Lt.otf#HelveticaNeueLTPro-Lt"/>
+                                            </OnPlatform>
+                                        </local:CustomPicker.FontFamily>
+                                    </local:CustomPicker>
+                                </Frame>
+
+                                <Entry IsVisible="False" IsEnabled="False" x:Name="entActivity"/>
+
+                                <Label Text="Activity Date" StyleClass="lbl-fieldform">
+                                    <Label.FontFamily>
+                                        <OnPlatform x:TypeArguments="x:String">
+                                            <On Platform="Android" Value="HelveticaNeueLTPro-Lt.otf#HelveticaNeueLTPro-Lt"/>
+                                        </OnPlatform>
+                                    </Label.FontFamily>
+                                </Label>
+                                <Frame StyleClass="fieldFrame" x:Name="ActDateFrame" CornerRadius="4" BorderColor="#e8eaed" HasShadow="False">
+                                    <local:CustomEntry IsEnabled="false" StyleClass="fieldForm" x:Name="dpDate">
+                                        <local:CustomEntry.FontFamily>
+                                            <OnPlatform x:TypeArguments="x:String">
+                                                <On Platform="Android" Value="HelveticaNeueLTPro-Lt.otf#HelveticaNeueLTPro-Lt"/>
+                                            </OnPlatform>
+                                        </local:CustomEntry.FontFamily>
+                                    </local:CustomEntry>
+                                </Frame>
+                                
+                                <Label Text="Start Time" StyleClass="lbl-fieldform">
+                                    <Label.FontFamily>
+                                        <OnPlatform x:TypeArguments="x:String">
+                                            <On Platform="Android" Value="HelveticaNeueLTPro-Lt.otf#HelveticaNeueLTPro-Lt"/>
+                                        </OnPlatform>
+                                    </Label.FontFamily>
+                                </Label>
+                                <Frame StyleClass="fieldFrame" x:Name="ActStartFrame" CornerRadius="4" BorderColor="#e8eaed" HasShadow="False">
+                                    <local:CustomEntry IsEnabled="false" StyleClass="fieldForm" x:Name="tpTime">
+                                        <local:CustomEntry.FontFamily>
+                                            <OnPlatform x:TypeArguments="x:String">
+                                                <On Platform="Android" Value="HelveticaNeueLTPro-Lt.otf#HelveticaNeueLTPro-Lt"/>
+                                            </OnPlatform>
+                                        </local:CustomEntry.FontFamily>
+                                    </local:CustomEntry>
+                                </Frame>
+
+                                <Label Text="Remark(s)" StyleClass="lbl-fieldform">
+                                    <Label.FontFamily>
+                                        <OnPlatform x:TypeArguments="x:String">
+                                            <On Platform="Android" Value="HelveticaNeueLTPro-Lt.otf#HelveticaNeueLTPro-Lt"/>
+                                        </OnPlatform>
+                                    </Label.FontFamily>
+                                </Label>
+                                <Frame StyleClass="fieldFrame" x:Name="RemarksFrame" CornerRadius="4" BorderColor="#e8eaed" HasShadow="False">
+                                    <local:CustomEntry x:Name="entRemarks" Focused="EntRemarks_Focused" Unfocused="EntRemarks_Unfocused" StyleClass="fieldForm">
+                                        <local:CustomEntry.FontFamily>
+                                            <OnPlatform x:TypeArguments="x:String">
+                                                <On Platform="Android" Value="HelveticaNeueLTPro-Lt.otf#HelveticaNeueLTPro-Lt"/>
+                                            </OnPlatform>
+                                        </local:CustomEntry.FontFamily>
+                                    </local:CustomEntry>
+                                </Frame>
+
+                                <Label Text="Other Concern(s)" StyleClass="lbl-fieldform">
+                                    <Label.FontFamily>
+                                        <OnPlatform x:TypeArguments="x:String">
+                                            <On Platform="Android" Value="HelveticaNeueLTPro-Lt.otf#HelveticaNeueLTPro-Lt"/>
+                                        </OnPlatform>
+                                    </Label.FontFamily>
+                                </Label>
+                                <Frame StyleClass="fieldFrame" x:Name="OthersFrame" CornerRadius="4" BorderColor="#e8eaed" HasShadow="False">
+                                    <local:CustomEntry x:Name="entOthers" Focused="EntOthers_Focused" Unfocused="EntOthers_Unfocused" StyleClass="fieldForm">
+                                        <local:CustomEntry.FontFamily>
+                                            <OnPlatform x:TypeArguments="x:String">
+                                                <On Platform="Android" Value="HelveticaNeueLTPro-Lt.otf#HelveticaNeueLTPro-Lt"/>
+                                            </OnPlatform>
+                                        </local:CustomEntry.FontFamily>
+                                    </local:CustomEntry>
+                                </Frame>
+
+                                <StackLayout x:Name="page1nav">
+                                    <Grid ColumnSpacing="10" RowSpacing="0">
+                                        <Button Grid.Row="0" Grid.Column="1" StyleClass="btn-nav" Clicked="BtnGotoPage2_Clicked" x:Name="btnGotoPage2" Text="Next" BorderRadius="6">
+                                            <Button.FontFamily>
+                                                <OnPlatform x:TypeArguments="x:String">
+                                                    <On Platform="Android" Value="HelveticaNeueLTPro-Lt.otf#HelveticaNeueLTPro-Lt"/>
+                                                </OnPlatform>
+                                            </Button.FontFamily>
+                                        </Button>
+                                    </Grid>
+                                </StackLayout>
+                            </StackLayout>
+                            
+                            <StackLayout Orientation="Vertical" x:Name="fafPage2" Spacing="5" IsVisible="False">
+                                <Label Text="Breakfast" StyleClass="lbl-fieldform">
+                                    <Label.FontFamily>
+                                        <OnPlatform x:TypeArguments="x:String">
+                                            <On Platform="Android" Value="HelveticaNeueLTPro-Lt.otf#HelveticaNeueLTPro-Lt"/>
+                                        </OnPlatform>
+                                    </Label.FontFamily>
+                                </Label>
+                                <Frame StyleClass="fieldFrame" x:Name="BreakfastFrame" CornerRadius="4" BorderColor="#e8eaed" HasShadow="False">
+                                    <local:CustomEntry Keyboard="Numeric" Focused="EntBreakfast_Focused" Unfocused="EntBreakfast_Unfocused" TextChanged="EntBreakfast_TextChanged" Text="0" StyleClass="fieldForm" x:Name="entBreakfast">
+                                        <local:CustomEntry.FontFamily>
+                                            <OnPlatform x:TypeArguments="x:String">
+                                                <On Platform="Android" Value="HelveticaNeueLTPro-Lt.otf#HelveticaNeueLTPro-Lt"/>
+                                            </OnPlatform>
+                                        </local:CustomEntry.FontFamily>
+                                    </local:CustomEntry>
+                                </Frame>
+
+                                <Label Text="Lunch" StyleClass="lbl-fieldform">
+                                    <Label.FontFamily>
+                                        <OnPlatform x:TypeArguments="x:String">
+                                            <On Platform="Android" Value="HelveticaNeueLTPro-Lt.otf#HelveticaNeueLTPro-Lt"/>
+                                        </OnPlatform>
+                                    </Label.FontFamily>
+                                </Label>
+                                <Frame StyleClass="fieldFrame" x:Name="LunchFrame" CornerRadius="4" BorderColor="#e8eaed" HasShadow="False">
+                                    <local:CustomEntry Keyboard="Numeric" Focused="EntLunch_Focused" Unfocused="EntLunch_Unfocused" TextChanged="EntLunch_TextChanged" Text="0" StyleClass="fieldForm" x:Name="entLunch">
+                                        <local:CustomEntry.FontFamily>
+                                            <OnPlatform x:TypeArguments="x:String">
+                                                <On Platform="Android" Value="HelveticaNeueLTPro-Lt.otf#HelveticaNeueLTPro-Lt"/>
+                                            </OnPlatform>
+                                        </local:CustomEntry.FontFamily>
+                                    </local:CustomEntry>
+                                </Frame>
+
+                                <Label Text="Dinner" StyleClass="lbl-fieldform">
+                                    <Label.FontFamily>
+                                        <OnPlatform x:TypeArguments="x:String">
+                                            <On Platform="Android" Value="HelveticaNeueLTPro-Lt.otf#HelveticaNeueLTPro-Lt"/>
+                                        </OnPlatform>
+                                    </Label.FontFamily>
+                                </Label>
+                                <Frame StyleClass="fieldFrame" x:Name="DinnerFrame" CornerRadius="4" BorderColor="#e8eaed" HasShadow="False">
+                                    <local:CustomEntry Keyboard="Numeric" Focused="EntDinner_Focused" Unfocused="EntDinner_Unfocused" TextChanged="EntDinner_TextChanged" Text="0" StyleClass="fieldForm" x:Name="entDinner">
+                                        <local:CustomEntry.FontFamily>
+                                            <OnPlatform x:TypeArguments="x:String">
+                                                <On Platform="Android" Value="HelveticaNeueLTPro-Lt.otf#HelveticaNeueLTPro-Lt"/>
+                                            </OnPlatform>
+                                        </local:CustomEntry.FontFamily>
+                                    </local:CustomEntry>
+                                </Frame>
+
+                                <Label Text="Hotel Accommodation" StyleClass="lbl-fieldform">
+                                    <Label.FontFamily>
+                                        <OnPlatform x:TypeArguments="x:String">
+                                            <On Platform="Android" Value="HelveticaNeueLTPro-Lt.otf#HelveticaNeueLTPro-Lt"/>
+                                        </OnPlatform>
+                                    </Label.FontFamily>
+                                </Label>
+                                <Frame StyleClass="fieldFrame" x:Name="HotelFrame" CornerRadius="4" BorderColor="#e8eaed" HasShadow="False">
+                                    <local:CustomEntry Keyboard="Numeric" Focused="EntHotel_Focused" Unfocused="EntHotel_Unfocused" TextChanged="EntHotel_TextChanged" Text="0" StyleClass="fieldForm" x:Name="entHotel">
+                                        <local:CustomEntry.FontFamily>
+                                            <OnPlatform x:TypeArguments="x:String">
+                                                <On Platform="Android" Value="HelveticaNeueLTPro-Lt.otf#HelveticaNeueLTPro-Lt"/>
+                                            </OnPlatform>
+                                        </local:CustomEntry.FontFamily>
+                                    </local:CustomEntry>
+                                </Frame>
+
+                                <Label Text="Transportation Fare" StyleClass="lbl-fieldform">
+                                    <Label.FontFamily>
+                                        <OnPlatform x:TypeArguments="x:String">
+                                            <On Platform="Android" Value="HelveticaNeueLTPro-Lt.otf#HelveticaNeueLTPro-Lt"/>
+                                        </OnPlatform>
+                                    </Label.FontFamily>
+                                </Label>
+                                <Frame StyleClass="fieldFrame" x:Name="TransportationFrame" CornerRadius="4" BorderColor="#e8eaed" HasShadow="False">
+                                    <local:CustomEntry Keyboard="Numeric" Focused="EntTransportation_Focused" Unfocused="EntTransportation_Unfocused" TextChanged="EntTransportation_TextChanged" Text="0" StyleClass="fieldForm" x:Name="entTransportation">
+                                        <local:CustomEntry.FontFamily>
+                                            <OnPlatform x:TypeArguments="x:String">
+                                                <On Platform="Android" Value="HelveticaNeueLTPro-Lt.otf#HelveticaNeueLTPro-Lt"/>
+                                            </OnPlatform>
+                                        </local:CustomEntry.FontFamily>
+                                    </local:CustomEntry>
+                                </Frame>
+
+                                <Label Text="Cash Advance" StyleClass="lbl-fieldform">
+                                    <Label.FontFamily>
+                                        <OnPlatform x:TypeArguments="x:String">
+                                            <On Platform="Android" Value="HelveticaNeueLTPro-Lt.otf#HelveticaNeueLTPro-Lt"/>
+                                        </OnPlatform>
+                                    </Label.FontFamily>
+                                </Label>
+                                <Frame StyleClass="fieldFrame" x:Name="CashFrame" CornerRadius="4" BorderColor="#e8eaed" HasShadow="False">
+                                    <local:CustomEntry Keyboard="Numeric" Focused="EntCash_Focused" Unfocused="EntCash_Unfocused" TextChanged="EntCash_TextChanged" Text="0" StyleClass="fieldForm" x:Name="entCash">
+                                        <local:CustomEntry.FontFamily>
+                                            <OnPlatform x:TypeArguments="x:String">
+                                                <On Platform="Android" Value="HelveticaNeueLTPro-Lt.otf#HelveticaNeueLTPro-Lt"/>
+                                            </OnPlatform>
+                                        </local:CustomEntry.FontFamily>
+                                    </local:CustomEntry>
+                                </Frame>
+
+                                <Label Text="Total" StyleClass="lbl-fieldform">
+                                    <Label.FontFamily>
+                                        <OnPlatform x:TypeArguments="x:String">
+                                            <On Platform="Android" Value="HelveticaNeueLTPro-Lt.otf#HelveticaNeueLTPro-Lt"/>
+                                        </OnPlatform>
+                                    </Label.FontFamily>
+                                </Label>
+                                <Frame StyleClass="fieldFrame" x:Name="TotalFrame" CornerRadius="4" BorderColor="#e8eaed" IsEnabled="False" HasShadow="False">
+                                    <local:CustomEntry Keyboard="Numeric" StyleClass="fieldForm" x:Name="entTotal">
+                                        <local:CustomEntry.FontFamily>
+                                            <OnPlatform x:TypeArguments="x:String">
+                                                <On Platform="Android" Value="HelveticaNeueLTPro-Lt.otf#HelveticaNeueLTPro-Lt"/>
+                                            </OnPlatform>
+                                        </local:CustomEntry.FontFamily>
+                                    </local:CustomEntry>
+                                </Frame>
+
+                                <StackLayout x:Name="page2nav" IsVisible="False">
+                                    <Grid ColumnSpacing="10" RowSpacing="0">
+                                        <Button Grid.Row="0" Grid.Column="0" BorderRadius="6" Clicked="BtnGoBacktoPage1_Clicked" StyleClass="btn-nav" x:Name="btnGoBacktoPage1" Text="Back">
+                                            <Button.FontFamily>
+                                                <OnPlatform x:TypeArguments="x:String">
+                                                    <On Platform="Android" Value="HelveticaNeueLTPro-Lt.otf#HelveticaNeueLTPro-Lt"/>
+                                                </OnPlatform>
+                                            </Button.FontFamily>
+                                        </Button>
+                                        <Button Grid.Row="0" Grid.Column="1" BorderRadius="6" Clicked="BtnGotoPage3_Clicked" StyleClass="btn-nav" x:Name="btnGotoPage3" Text="Next">
+                                            <Button.FontFamily>
+                                                <OnPlatform x:TypeArguments="x:String">
+                                                    <On Platform="Android" Value="HelveticaNeueLTPro-Lt.otf#HelveticaNeueLTPro-Lt"/>
+                                                </OnPlatform>
+                                            </Button.FontFamily>
+                                        </Button>
+                                    </Grid>
+                                </StackLayout>
+                            </StackLayout>
+                            
+                            <StackLayout Orientation="Vertical" x:Name="fafPage3" IsVisible="False">
+                                <Label Text="Customer Signature" StyleClass="lbl-fieldform">
+                                    <Label.FontFamily>
+                                        <OnPlatform x:TypeArguments="x:String">
+                                            <On Platform="Android" Value="HelveticaNeueLTPro-Lt.otf#HelveticaNeueLTPro-Lt"/>
+                                        </OnPlatform>
+                                    </Label.FontFamily>
+                                </Label>
+                                <forms:SignaturePadView x:Name="Signature" StrokeColor="Black" BackgroundColor="White" HeightRequest="250" />
+                                <StackLayout x:Name="page3nav" IsVisible="False">
+                                    <Grid ColumnSpacing="10" RowSpacing="0">
+                                        <Button Grid.Row="0" Grid.Column="0" BorderRadius="6" Clicked="BtnGoBacktoPage3_Clicked"  StyleClass="btn-nav" x:Name="btnGoBacktoPage3" Text="Back">
+                                            <Button.FontFamily>
+                                                <OnPlatform x:TypeArguments="x:String">
+                                                    <On Platform="Android" Value="HelveticaNeueLTPro-Lt.otf#HelveticaNeueLTPro-Lt"/>
+                                                </OnPlatform>
+                                            </Button.FontFamily>
+                                        </Button>
+                                        <Button Grid.Row="0" Grid.Column="1" BorderRadius="6" Clicked="BtnSend_Clicked" StyleClass="btn-nav"  x:Name="btnSend" Text="Send">
+                                            <Button.FontFamily>
+                                                <OnPlatform x:TypeArguments="x:String">
+                                                    <On Platform="Android" Value="HelveticaNeueLTPro-Lt.otf#HelveticaNeueLTPro-Lt"/>
+                                                </OnPlatform>
+                                            </Button.FontFamily>
+                                        </Button>
+                                    </Grid>
+                                </StackLayout>
+                            </StackLayout>
+                        </StackLayout>
+                    </ScrollView>
+                </StackLayout>
+            </Frame>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

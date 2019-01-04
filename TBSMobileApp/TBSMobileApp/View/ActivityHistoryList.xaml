@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TBSMobileApp.View.ActivityHistoryList"
+             NavigationPage.HasBackButton="False"
+             Title="Activity History"
+             StyleClass="acthistory">
+    <ContentPage.Resources>
+        <StyleSheet Source="/Stylesheet/globalstylesheet.css" />
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <StackLayout>
+            <ListView IsPullToRefreshEnabled="True" SeparatorVisibility="None" Refreshing="lstActivity_Refreshing" x:Name="lstActivity" ItemTapped="lstActivity_ItemTapped" ItemSelected="lstActivity_ItemSelected" HasUnevenRows="True">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Frame StyleClass="lstframe" CornerRadius="0" BorderColor="Transparent" HasShadow="False">
+                                <StackLayout StyleClass="lstContainer" VerticalOptions="CenterAndExpand">
+                                    <Label StyleClass="lstName" Text="{Binding ActNumber}">
+                                        <Label.FontFamily>
+                                            <OnPlatform x:TypeArguments="x:String">
+                                                <On Platform="Android" Value="HelveticaNeueLTPro-Md.otf#HelveticaNeueLTPro-Md"/>
+                                            </OnPlatform>
+                                        </Label.FontFamily>
+                                    </Label>
+                                    <Label StyleClass="lstSubName" Text="{Binding ActDate}">
+                                        <Label.FontFamily>
+                                            <OnPlatform x:TypeArguments="x:String">
+                                                <On Platform="Android" Value="HelveticaNeueLTPro-Lt.otf#HelveticaNeueLTPro-Lt"/>
+                                            </OnPlatform>
+                                        </Label.FontFamily>
+                                    </Label>
+                                </StackLayout>
+                            </Frame>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            <StackLayout x:Name="activityIndicator" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" IsVisible="False">
+                <Label StyleClass="lblSync" Text="No activity">
+                    <Label.FontFamily>
+                        <OnPlatform x:TypeArguments="x:String">
+                            <On Platform="Android" Value="HelveticaNeueLTPro-Lt.otf#HelveticaNeueLTPro-Lt"/>
+                        </OnPlatform>
+                    </Label.FontFamily>
+                </Label>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -133,13 +133,22 @@
                                     </local:CustomEntry>
                                 </StackLayout>
                             </Frame>
-                            <Button Text="Login" Clicked="btnLogin_Clicked" StyleClass="btn-login" x:Name="btnLogin" BorderRadius="6">
-                                <Button.FontFamily>
-                                    <OnPlatform x:TypeArguments="x:String">
-                                        <On Platform="Android" Value="HelveticaNeueLTPro-Lt.otf#HelveticaNeueLTPro-Lt"/>
-                                    </OnPlatform>
-                                </Button.FontFamily>
-                            </Button>
+                            <Grid>
+                                <Button Text="Login" Grid.Column="0" Grid.Row="0" Clicked="btnLogin_Clicked" StyleClass="btn-login" x:Name="btnLogin" BorderRadius="6">
+                                    <Button.FontFamily>
+                                        <OnPlatform x:TypeArguments="x:String">
+                                            <On Platform="Android" Value="HelveticaNeueLTPro-Lt.otf#HelveticaNeueLTPro-Lt"/>
+                                        </OnPlatform>
+                                    </Button.FontFamily>
+                                </Button>
+                                <Button Text="Change Connection" Grid.Column="1" Grid.Row="0" Clicked="BtnChange_Clicked" StyleClass="btn-login" x:Name="btnChange" BorderRadius="6">
+                                    <Button.FontFamily>
+                                        <OnPlatform x:TypeArguments="x:String">
+                                            <On Platform="Android" Value="HelveticaNeueLTPro-Lt.otf#HelveticaNeueLTPro-Lt"/>
+                                        </OnPlatform>
+                                    </Button.FontFamily>
+                                </Button>
+                            </Grid>
                         </StackLayout>
                         <Grid>
                             <Grid.ColumnDefinitions>
