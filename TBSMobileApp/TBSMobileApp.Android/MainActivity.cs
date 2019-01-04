@@ -5,6 +5,10 @@ using Android.Content.PM;
 using Android.OS;
 using Android;
 using Android.Views;
+using Microsoft.AppCenter;
+using Microsoft.AppCenter.Analytics;
+using Microsoft.AppCenter.Crashes;
+using Microsoft.AppCenter.Distribute;
 
 namespace TBSMobileApp.Droid
 {
@@ -22,6 +26,8 @@ namespace TBSMobileApp.Droid
             LoadApplication(new App());
 
             this.Window.SetFlags(WindowManagerFlags.KeepScreenOn, WindowManagerFlags.KeepScreenOn);
+
+            AppCenter.Start("db6315f6-be53-46f8-bf99-4e384ee1e0f7", typeof(Analytics), typeof(Crashes), typeof(Distribute));
 
             if (Build.VERSION.SdkInt >= BuildVersionCodes.M)
             {

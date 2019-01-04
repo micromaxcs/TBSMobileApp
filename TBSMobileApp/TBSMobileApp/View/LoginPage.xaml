@@ -9,179 +9,181 @@
         <StyleSheet Source="/Stylesheet/globalstylesheet.css" />
     </ContentPage.Resources>
     <ContentPage.Content>
-        <StackLayout>
-            <StackLayout StyleClass="toplogin" VerticalOptions="Start">
-                <Label StyleClass="lblWelcome" Text="Welcome.">
-                    <Label.FontFamily>
-                        <OnPlatform x:TypeArguments="x:String">
-                            <On Platform="Android" Value="HelveticaNeueLTPro-Md.otf#HelveticaNeueLTPro-Md"/>
-                        </OnPlatform>
-                    </Label.FontFamily>
-                </Label>
-                <Label StyleClass="lblSubWelcome" Text="Login your account to continue.">
-                    <Label.FontFamily>
-                        <OnPlatform x:TypeArguments="x:String">
-                            <On Platform="Android" Value="HelveticaNeueLTPro-Lt.otf#HelveticaNeueLTPro-Lt"/>
-                        </OnPlatform>
-                    </Label.FontFamily>
-                </Label>
-            </StackLayout>
-            <StackLayout VerticalOptions="CenterAndExpand">
-                <Frame StyleClass="loginframe" CornerRadius="5" BorderColor="Transparent" HasShadow="False">
-                    <StackLayout>
-                        <StackLayout x:Name="connectform">
-                            <Label Text="Server IP Address" StyleClass="lbl-login" IsVisible="True">
-                                <Label.FontFamily>
-                                    <OnPlatform x:TypeArguments="x:String">
-                                        <On Platform="Android" Value="HelveticaNeueLTPro-Lt.otf#HelveticaNeueLTPro-Lt"/>
-                                    </OnPlatform>
-                                </Label.FontFamily>
-                            </Label>
-                            <Frame StyleClass="lpframe" x:Name="ipaddressFrame" CornerRadius="5" BorderColor="#f2f2f5" HasShadow="False">
-                                <StackLayout>
-                                    <local:CustomEntry Focused="entIPAddress_Focused" Unfocused="entIPAddress_Unfocused" StyleClass="form-control" ReturnType="Next" x:Name="entIPAddress">
-                                        <local:CustomEntry.FontFamily>
-                                            <OnPlatform x:TypeArguments="x:String">
-                                                <On Platform="Android" Value="HelveticaNeueLTPro-Lt.otf#HelveticaNeueLTPro-Lt"/>
-                                            </OnPlatform>
-                                        </local:CustomEntry.FontFamily>
-                                    </local:CustomEntry>
-                                </StackLayout>
-                            </Frame>
+        <ScrollView>
+            <StackLayout>
+                <StackLayout StyleClass="toplogin" VerticalOptions="Start">
+                    <Label StyleClass="lblWelcome" Text="Welcome.">
+                        <Label.FontFamily>
+                            <OnPlatform x:TypeArguments="x:String">
+                                <On Platform="Android" Value="HelveticaNeueLTPro-Md.otf#HelveticaNeueLTPro-Md"/>
+                            </OnPlatform>
+                        </Label.FontFamily>
+                    </Label>
+                    <Label StyleClass="lblSubWelcome" Text="Login your account to continue.">
+                        <Label.FontFamily>
+                            <OnPlatform x:TypeArguments="x:String">
+                                <On Platform="Android" Value="HelveticaNeueLTPro-Lt.otf#HelveticaNeueLTPro-Lt"/>
+                            </OnPlatform>
+                        </Label.FontFamily>
+                    </Label>
+                </StackLayout>
+                <StackLayout VerticalOptions="CenterAndExpand">
+                    <Frame StyleClass="loginframe" CornerRadius="5" BorderColor="Transparent" HasShadow="False">
+                        <StackLayout>
+                            <StackLayout x:Name="connectform">
+                                <Label Text="Server IP Address" StyleClass="lbl-login" IsVisible="True">
+                                    <Label.FontFamily>
+                                        <OnPlatform x:TypeArguments="x:String">
+                                            <On Platform="Android" Value="HelveticaNeueLTPro-Lt.otf#HelveticaNeueLTPro-Lt"/>
+                                        </OnPlatform>
+                                    </Label.FontFamily>
+                                </Label>
+                                <Frame StyleClass="lpframe" x:Name="ipaddressFrame" CornerRadius="5" BorderColor="#f2f2f5" HasShadow="False">
+                                    <StackLayout>
+                                        <local:CustomEntry Focused="entIPAddress_Focused" Unfocused="entIPAddress_Unfocused" StyleClass="form-control" ReturnType="Next" x:Name="entIPAddress">
+                                            <local:CustomEntry.FontFamily>
+                                                <OnPlatform x:TypeArguments="x:String">
+                                                    <On Platform="Android" Value="HelveticaNeueLTPro-Lt.otf#HelveticaNeueLTPro-Lt"/>
+                                                </OnPlatform>
+                                            </local:CustomEntry.FontFamily>
+                                        </local:CustomEntry>
+                                    </StackLayout>
+                                </Frame>
 
-                            <Label Text="Server Name" StyleClass="lbl-login">
-                                <Label.FontFamily>
-                                    <OnPlatform x:TypeArguments="x:String">
-                                        <On Platform="Android" Value="HelveticaNeueLTPro-Lt.otf#HelveticaNeueLTPro-Lt"/>
-                                    </OnPlatform>
-                                </Label.FontFamily>
-                            </Label>
-                            <Frame StyleClass="lpframe" x:Name="hostFrame" CornerRadius="5" BorderColor="#f2f2f5" HasShadow="False">
-                                <StackLayout>
-                                    <local:CustomEntry Focused="entHost_Focused" Unfocused="entHost_Unfocused" PlaceholderColor="#879baa" StyleClass="form-control" ReturnType="Next" x:Name="entHost">
-                                        <local:CustomEntry.FontFamily>
-                                            <OnPlatform x:TypeArguments="x:String">
-                                                <On Platform="Android" Value="HelveticaNeueLTPro-Lt.otf#HelveticaNeueLTPro-Lt"/>
-                                            </OnPlatform>
-                                        </local:CustomEntry.FontFamily>
-                                    </local:CustomEntry>
-                                </StackLayout>
-                            </Frame>
+                                <Label Text="Server Name" StyleClass="lbl-login">
+                                    <Label.FontFamily>
+                                        <OnPlatform x:TypeArguments="x:String">
+                                            <On Platform="Android" Value="HelveticaNeueLTPro-Lt.otf#HelveticaNeueLTPro-Lt"/>
+                                        </OnPlatform>
+                                    </Label.FontFamily>
+                                </Label>
+                                <Frame StyleClass="lpframe" x:Name="hostFrame" CornerRadius="5" BorderColor="#f2f2f5" HasShadow="False">
+                                    <StackLayout>
+                                        <local:CustomEntry Focused="entHost_Focused" Unfocused="entHost_Unfocused" PlaceholderColor="#879baa" StyleClass="form-control" ReturnType="Next" x:Name="entHost">
+                                            <local:CustomEntry.FontFamily>
+                                                <OnPlatform x:TypeArguments="x:String">
+                                                    <On Platform="Android" Value="HelveticaNeueLTPro-Lt.otf#HelveticaNeueLTPro-Lt"/>
+                                                </OnPlatform>
+                                            </local:CustomEntry.FontFamily>
+                                        </local:CustomEntry>
+                                    </StackLayout>
+                                </Frame>
 
-                            <Label Text="Database" StyleClass="lbl-login">
-                                <Label.FontFamily>
-                                    <OnPlatform x:TypeArguments="x:String">
-                                        <On Platform="Android" Value="HelveticaNeueLTPro-Lt.otf#HelveticaNeueLTPro-Lt"/>
-                                    </OnPlatform>
-                                </Label.FontFamily>
-                            </Label>
-                            <Frame StyleClass="lpframe" x:Name="databaseFrame" CornerRadius="5" BorderColor="#f2f2f5" HasShadow="False">
-                                <StackLayout>
-                                    <local:CustomEntry Focused="entDatabase_Focused" Unfocused="entDatabase_Unfocused" PlaceholderColor="#879baa" StyleClass="form-control" ReturnType="Next" x:Name="entDatabase">
-                                        <local:CustomEntry.FontFamily>
-                                            <OnPlatform x:TypeArguments="x:String">
-                                                <On Platform="Android" Value="HelveticaNeueLTPro-Lt.otf#HelveticaNeueLTPro-Lt"/>
-                                            </OnPlatform>
-                                        </local:CustomEntry.FontFamily>
-                                    </local:CustomEntry>
-                                </StackLayout>
-                            </Frame>
-                            <Button Text="Connect" Clicked="btnConnect_Clicked" StyleClass="btn-login" x:Name="btnConnect" BorderRadius="6">
-                                <Button.FontFamily>
-                                    <OnPlatform x:TypeArguments="x:String">
-                                        <On Platform="Android" Value="HelveticaNeueLTPro-Lt.otf#HelveticaNeueLTPro-Lt"/>
-                                    </OnPlatform>
-                                </Button.FontFamily>
-                            </Button>
-                        </StackLayout>
+                                <Label Text="Database" StyleClass="lbl-login">
+                                    <Label.FontFamily>
+                                        <OnPlatform x:TypeArguments="x:String">
+                                            <On Platform="Android" Value="HelveticaNeueLTPro-Lt.otf#HelveticaNeueLTPro-Lt"/>
+                                        </OnPlatform>
+                                    </Label.FontFamily>
+                                </Label>
+                                <Frame StyleClass="lpframe" x:Name="databaseFrame" CornerRadius="5" BorderColor="#f2f2f5" HasShadow="False">
+                                    <StackLayout>
+                                        <local:CustomEntry Focused="entDatabase_Focused" Unfocused="entDatabase_Unfocused" PlaceholderColor="#879baa" StyleClass="form-control" ReturnType="Next" x:Name="entDatabase">
+                                            <local:CustomEntry.FontFamily>
+                                                <OnPlatform x:TypeArguments="x:String">
+                                                    <On Platform="Android" Value="HelveticaNeueLTPro-Lt.otf#HelveticaNeueLTPro-Lt"/>
+                                                </OnPlatform>
+                                            </local:CustomEntry.FontFamily>
+                                        </local:CustomEntry>
+                                    </StackLayout>
+                                </Frame>
+                                <Button Text="Connect" Clicked="btnConnect_Clicked" StyleClass="btn-login" x:Name="btnConnect" BorderRadius="6">
+                                    <Button.FontFamily>
+                                        <OnPlatform x:TypeArguments="x:String">
+                                            <On Platform="Android" Value="HelveticaNeueLTPro-Lt.otf#HelveticaNeueLTPro-Lt"/>
+                                        </OnPlatform>
+                                    </Button.FontFamily>
+                                </Button>
+                            </StackLayout>
 
-                        <StackLayout x:Name="loginform" IsVisible="False">
-                            <Label Text="Username" StyleClass="lbl-login">
-                                <Label.FontFamily>
-                                    <OnPlatform x:TypeArguments="x:String">
-                                        <On Platform="Android" Value="HelveticaNeueLTPro-Lt.otf#HelveticaNeueLTPro-Lt"/>
-                                    </OnPlatform>
-                                </Label.FontFamily>
-                            </Label>
-                            <Frame StyleClass="lpframe" x:Name="usernameFrame" CornerRadius="5" BorderColor="#f2f2f5" HasShadow="False">
-                                <StackLayout>
-                                    <local:CustomEntry Focused="entUser_Focused" Unfocused="entUser_Unfocused" StyleClass="form-control" ReturnType="Next" x:Name="entUser">
-                                        <local:CustomEntry.FontFamily>
-                                            <OnPlatform x:TypeArguments="x:String">
-                                                <On Platform="Android" Value="HelveticaNeueLTPro-Lt.otf#HelveticaNeueLTPro-Lt"/>
-                                            </OnPlatform>
-                                        </local:CustomEntry.FontFamily>
-                                    </local:CustomEntry>
-                                </StackLayout>
-                            </Frame>
+                            <StackLayout x:Name="loginform" IsVisible="False">
+                                <Label Text="Username" StyleClass="lbl-login">
+                                    <Label.FontFamily>
+                                        <OnPlatform x:TypeArguments="x:String">
+                                            <On Platform="Android" Value="HelveticaNeueLTPro-Lt.otf#HelveticaNeueLTPro-Lt"/>
+                                        </OnPlatform>
+                                    </Label.FontFamily>
+                                </Label>
+                                <Frame StyleClass="lpframe" x:Name="usernameFrame" CornerRadius="5" BorderColor="#f2f2f5" HasShadow="False">
+                                    <StackLayout>
+                                        <local:CustomEntry Focused="entUser_Focused" Unfocused="entUser_Unfocused" StyleClass="form-control" ReturnType="Next" x:Name="entUser">
+                                            <local:CustomEntry.FontFamily>
+                                                <OnPlatform x:TypeArguments="x:String">
+                                                    <On Platform="Android" Value="HelveticaNeueLTPro-Lt.otf#HelveticaNeueLTPro-Lt"/>
+                                                </OnPlatform>
+                                            </local:CustomEntry.FontFamily>
+                                        </local:CustomEntry>
+                                    </StackLayout>
+                                </Frame>
 
-                            <Label Text="Password" StyleClass="lbl-login">
-                                <Label.FontFamily>
-                                    <OnPlatform x:TypeArguments="x:String">
-                                        <On Platform="Android" Value="HelveticaNeueLTPro-Lt.otf#HelveticaNeueLTPro-Lt"/>
-                                    </OnPlatform>
-                                </Label.FontFamily>
-                            </Label>
-                            <Frame StyleClass="lpframe" x:Name="passwordFrame" CornerRadius="5" BorderColor="#f2f2f5" HasShadow="False">
-                                <StackLayout>
-                                    <local:CustomEntry Focused="entPassword_Focused" Unfocused="entPassword_Unfocused" IsPassword="True" StyleClass="form-control" ReturnType="Go" x:Name="entPassword">
-                                        <local:CustomEntry.FontFamily>
+                                <Label Text="Password" StyleClass="lbl-login">
+                                    <Label.FontFamily>
+                                        <OnPlatform x:TypeArguments="x:String">
+                                            <On Platform="Android" Value="HelveticaNeueLTPro-Lt.otf#HelveticaNeueLTPro-Lt"/>
+                                        </OnPlatform>
+                                    </Label.FontFamily>
+                                </Label>
+                                <Frame StyleClass="lpframe" x:Name="passwordFrame" CornerRadius="5" BorderColor="#f2f2f5" HasShadow="False">
+                                    <StackLayout>
+                                        <local:CustomEntry Focused="entPassword_Focused" Unfocused="entPassword_Unfocused" IsPassword="True" StyleClass="form-control" ReturnType="Go" x:Name="entPassword">
+                                            <local:CustomEntry.FontFamily>
+                                                <OnPlatform x:TypeArguments="x:String">
+                                                    <On Platform="Android" Value="HelveticaNeueLTPro-Lt.otf#HelveticaNeueLTPro-Lt"/>
+                                                </OnPlatform>
+                                            </local:CustomEntry.FontFamily>
+                                        </local:CustomEntry>
+                                    </StackLayout>
+                                </Frame>
+                                <Grid>
+                                    <Button Text="Login" Grid.Column="0" Grid.Row="0" Clicked="btnLogin_Clicked" StyleClass="btn-login" x:Name="btnLogin" BorderRadius="6">
+                                        <Button.FontFamily>
                                             <OnPlatform x:TypeArguments="x:String">
                                                 <On Platform="Android" Value="HelveticaNeueLTPro-Lt.otf#HelveticaNeueLTPro-Lt"/>
                                             </OnPlatform>
-                                        </local:CustomEntry.FontFamily>
-                                    </local:CustomEntry>
-                                </StackLayout>
-                            </Frame>
+                                        </Button.FontFamily>
+                                    </Button>
+                                    <Button Text="Back" Grid.Column="1" Grid.Row="0" Clicked="BtnChange_Clicked" StyleClass="btn-login" x:Name="btnChange" BorderRadius="6">
+                                        <Button.FontFamily>
+                                            <OnPlatform x:TypeArguments="x:String">
+                                                <On Platform="Android" Value="HelveticaNeueLTPro-Lt.otf#HelveticaNeueLTPro-Lt"/>
+                                            </OnPlatform>
+                                        </Button.FontFamily>
+                                    </Button>
+                                </Grid>
+                            </StackLayout>
                             <Grid>
-                                <Button Text="Login" Grid.Column="0" Grid.Row="0" Clicked="btnLogin_Clicked" StyleClass="btn-login" x:Name="btnLogin" BorderRadius="6">
-                                    <Button.FontFamily>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+                                <Label Grid.Row="0" Grid.Column="0" StyleClass="bottomLabel" x:Name="lblVersion">
+                                    <Label.FontFamily>
                                         <OnPlatform x:TypeArguments="x:String">
                                             <On Platform="Android" Value="HelveticaNeueLTPro-Lt.otf#HelveticaNeueLTPro-Lt"/>
                                         </OnPlatform>
-                                    </Button.FontFamily>
-                                </Button>
-                                <Button Text="Back" Grid.Column="1" Grid.Row="0" Clicked="BtnChange_Clicked" StyleClass="btn-login" x:Name="btnChange" BorderRadius="6">
-                                    <Button.FontFamily>
+                                    </Label.FontFamily>
+                                </Label>
+                                <Label Grid.Row="0" Grid.Column="1" StyleClass="bottomLabel" x:Name="lblRegistrationCode">
+                                    <Label.FontFamily>
                                         <OnPlatform x:TypeArguments="x:String">
                                             <On Platform="Android" Value="HelveticaNeueLTPro-Lt.otf#HelveticaNeueLTPro-Lt"/>
                                         </OnPlatform>
-                                    </Button.FontFamily>
-                                </Button>
+                                    </Label.FontFamily>
+                                </Label>
                             </Grid>
                         </StackLayout>
-                        <Grid>
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="*" />
-                                <ColumnDefinition Width="*" />
-                            </Grid.ColumnDefinitions>
-                            <Label Grid.Row="0" Grid.Column="0" StyleClass="bottomLabel" x:Name="lblVersion">
-                                <Label.FontFamily>
-                                    <OnPlatform x:TypeArguments="x:String">
-                                        <On Platform="Android" Value="HelveticaNeueLTPro-Lt.otf#HelveticaNeueLTPro-Lt"/>
-                                    </OnPlatform>
-                                </Label.FontFamily>
-                            </Label>
-                            <Label Grid.Row="0" Grid.Column="1" StyleClass="bottomLabel" x:Name="lblRegistrationCode">
-                                <Label.FontFamily>
-                                    <OnPlatform x:TypeArguments="x:String">
-                                        <On Platform="Android" Value="HelveticaNeueLTPro-Lt.otf#HelveticaNeueLTPro-Lt"/>
-                                    </OnPlatform>
-                                </Label.FontFamily>
-                            </Label>
-                        </Grid>
-                    </StackLayout>
-                </Frame>
+                    </Frame>
+                </StackLayout>
+                <StackLayout VerticalOptions="End">
+                    <Label StyleClass="lblbottom" Text="Developed by: Micromax Computer Systems">
+                        <Label.FontFamily>
+                            <OnPlatform x:TypeArguments="x:String">
+                                <On Platform="Android" Value="HelveticaNeueLTPro-Lt.otf#HelveticaNeueLTPro-Lt"/>
+                            </OnPlatform>
+                        </Label.FontFamily>
+                    </Label>
+                </StackLayout>
             </StackLayout>
-            <StackLayout VerticalOptions="End">
-                <Label StyleClass="lblbottom" Text="Developed by: Micromax Computer Systems">
-                    <Label.FontFamily>
-                        <OnPlatform x:TypeArguments="x:String">
-                            <On Platform="Android" Value="HelveticaNeueLTPro-Lt.otf#HelveticaNeueLTPro-Lt"/>
-                        </OnPlatform>
-                    </Label.FontFamily>
-                </Label>
-            </StackLayout>
-        </StackLayout>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>
