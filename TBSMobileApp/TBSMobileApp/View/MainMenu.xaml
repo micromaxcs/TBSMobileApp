@@ -10,7 +10,9 @@
     <ContentPage.Content>
         <Grid RowSpacing="0" ColumnSpacing="0">
             <Grid.RowDefinitions>
-                <RowDefinition Height="25" />
+                <RowDefinition Height="20" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
                 <RowDefinition Height="*" />
                 <RowDefinition Height="*" />
             </Grid.RowDefinitions>
@@ -28,21 +30,21 @@
                     </OnPlatform>
                 </Button.FontFamily>
             </Button>
-            <Button StyleClass="btnAH" ContentLayout="Top, 0" Image="activityhistory.png" Text="Activity History" Grid.Row="1" Grid.Column="1" x:Name="btnAH" Clicked="btnAH_Clicked" BorderRadius="0">
+            <Button StyleClass="btnAH" ContentLayout="Top, 0" Image="activityhistory.png" Text="Activity History" Grid.Row="2" Grid.Column="0" x:Name="btnAH" Clicked="btnAH_Clicked" BorderRadius="0">
                 <Button.FontFamily>
                     <OnPlatform x:TypeArguments="x:String">
                         <On Platform="Android" Value="HelveticaNeueLTPro-Lt.otf#HelveticaNeueLTPro-Lt"/>
                     </OnPlatform>
                 </Button.FontFamily>
             </Button>
-            <Button StyleClass="btnUI" ContentLayout="Top, 0" Image="unsynceditem.png" Text="Unsynced Data" Grid.Row="2" Grid.Column="0" x:Name="btnUI" Clicked="btnUI_Clicked" BorderRadius="0">
+            <Button StyleClass="btnUI" ContentLayout="Top, 0" Image="unsynceditem.png" Text="Unsynced Data" Grid.Row="3" Grid.Column="0" x:Name="btnUI" Clicked="btnUI_Clicked" BorderRadius="0">
                 <Button.FontFamily>
                     <OnPlatform x:TypeArguments="x:String">
                         <On Platform="Android" Value="HelveticaNeueLTPro-Lt.otf#HelveticaNeueLTPro-Lt"/>
                     </OnPlatform>
                 </Button.FontFamily>
             </Button>
-            <Button StyleClass="btnLogout" ContentLayout="Top, 0" Image="logout.png" Text="Logout" Grid.Row="2" Grid.Column="1" x:Name="btnLogout" Clicked="btnLogout_Clicked" BorderRadius="0">
+            <Button StyleClass="btnLogout" ContentLayout="Top, 0" Image="logout.png" Text="Logout" Grid.Row="4" Grid.Column="0" x:Name="btnLogout" Clicked="btnLogout_Clicked" BorderRadius="0">
                 <Button.FontFamily>
                     <OnPlatform x:TypeArguments="x:String">
                         <On Platform="Android" Value="HelveticaNeueLTPro-Lt.otf#HelveticaNeueLTPro-Lt"/>

@@ -141,7 +141,7 @@
                                         </OnPlatform>
                                     </Button.FontFamily>
                                 </Button>
-                                <Button Text="Change Connection" Grid.Column="1" Grid.Row="0" Clicked="BtnChange_Clicked" StyleClass="btn-login" x:Name="btnChange" BorderRadius="6">
+                                <Button Text="Back" Grid.Column="1" Grid.Row="0" Clicked="BtnChange_Clicked" StyleClass="btn-login" x:Name="btnChange" BorderRadius="6">
                                     <Button.FontFamily>
                                         <OnPlatform x:TypeArguments="x:String">
                                             <On Platform="Android" Value="HelveticaNeueLTPro-Lt.otf#HelveticaNeueLTPro-Lt"/>

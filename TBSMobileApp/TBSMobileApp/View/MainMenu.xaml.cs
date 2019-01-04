@@ -635,7 +635,7 @@ namespace TBSMobileApp.View
                     {
                         Preferences.Set("appdatetime", DateTime.Now.ToString(), "private_prefs");
 
-                        //await Navigation.PushAsync(new UnsyncedData(host, database, contact, ipaddress, pingipaddress));
+                        await Navigation.PushAsync(new UnsyncedData(host, database, contact, ipaddress, pingipaddress));
                     }
                     else
                     {
